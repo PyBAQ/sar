@@ -7,6 +7,7 @@
     "GOOGLE":{
         "FILE_ROOT": "./Archivo de prueba Google forms.xlsx",
         "FILE_COLS": [0,1,2,3,4,5,6],
-        "FILE_SHEET": "Hoja1"
+        "FILE_SHEET": "Hoja1",
+        "FILE_COLS_FORMAT": {"Numero de identificacion": "object", "Telefono de contacto":"object"}
     }
 }
