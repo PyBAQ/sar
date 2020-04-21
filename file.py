@@ -62,4 +62,27 @@ else:
 googleList.dropna(inplace = True)
 
 
-# Comparación de dataframes
+# Comparación de dataframes - reemplazar participantsList por el dataframe resultante
+participantsList=googleList
+
+# Ordenando columnas para archivo
+participantsList = participantsList
+[[
+    'Nombre completo', 'Tipo de identificacion',
+    'Direccion de correo electronico', 'Telefono de contacto',
+    'Empresa y/o profesión y/o actividad'
+]]
+
+# Escribiendo resultados en nuevo archivo
+try:
+    if participantsList.empty:
+        print("El archivo de participantes de Meetup está vacío")
+    else:
+        with pd.ExcelWriter(config['PARTICIPANTS']['FILE_ROOT']) as writer:
+            participantsList.to_excel(writer, index=False)
+            writer.save()
+except PermissionError:
+    print("No se tienen permisos para acceder en la ruta especificada")
+else:
+    print("Creación de archivo de asistentes exitosa")
+    
