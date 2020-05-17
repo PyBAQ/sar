@@ -67,11 +67,11 @@ googleList.dropna(inplace=True)
 
 # Filtrando archivo de Google con inscripciones dentro de las fechas configuradas
 
-publication_date = datetime.strptime(
-    config['EVENT']['PUBLICATION_DATE'], '%Y/%m/%d %H::%M::%S').date()
+publication_date = pd.to_datetime(
+    config['EVENT']['PUBLICATION_DATE'])
 
-closing_date = datetime.strptime(
-    config['EVENT']['CLOSING_DATE'], '%Y/%m/%d %H::%M::%S').date()
+closing_date = pd.to_datetime(
+    config['EVENT']['CLOSING_DATE'])
 
 mask = (googleList['Marca temporal'] >= publication_date) & (
     googleList['Marca temporal'] <= closing_date)

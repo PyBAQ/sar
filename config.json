@@ -17,7 +17,7 @@
     "FILE_ROOT": "./Listado de asistentes.xlsx"
   },
   "EVENT": {
-    "PUBLICATION_DATE": "2020/04/02 00::00::00",
-    "CLOSING_DATE": "2020/04/30 23::59::59"
+    "PUBLICATION_DATE": "2020/04/02 00:00:00",
+    "CLOSING_DATE": "2020/04/30 23:59:59"
   }
 }
